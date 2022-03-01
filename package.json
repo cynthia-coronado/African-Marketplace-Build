@@ -1,0 +1,46 @@
+{
+  "name": "african-marketplace-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "cross-env NODE_ENV=testing jest --watch --runInBand",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "migup": "knex migrate:up",
+    "migdown": "knex migrate:down",
+    "seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cynthia-coronado/African-Marketplace-Build.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cynthia-coronado/African-Marketplace-Build/issues"
+  },
+  "homepage": "https://github.com/cynthia-coronado/African-Marketplace-Build#readme",
+  "dependencies": {
+    "@vscode/sqlite3": "^5.0.7",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.29.2",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
