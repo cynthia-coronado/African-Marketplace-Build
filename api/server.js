@@ -2,8 +2,8 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 const usersRouter = require('./users/users-router')
-// const productRouter = require('./products/product-router')
-// const categoryRouter = require('./category/category-router')
+const productRouter = require('./products/product-router')
+const categoryRouter = require('./category/category-router')
 const Users = require('./users/users-model')
 
 const server = express();
@@ -11,8 +11,8 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 server.use('/api/auth', usersRouter);
-// server.use('/api/products', productRouter);
-// server.use('/api/category', categoryRouter);
+server.use('/api/products', productRouter);
+server.use('/api/category', categoryRouter);
 
 
 server.get('/',(req, res) => {
