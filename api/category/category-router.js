@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Items = require('../Products/product-model');
-const { restricted } = require('../Products/product-middleware');
+const Items = require('../products/products-model');
+const { restricted } = require('../products/products-middleware');
 
 router.get('/',restricted,async(req,res,next) => {
     try{

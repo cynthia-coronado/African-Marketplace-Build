@@ -1,4 +1,4 @@
-const db = require('../data/db-config');
+const db = require('../../data/db-config');
 
 function getCategory() {
   return db('category');

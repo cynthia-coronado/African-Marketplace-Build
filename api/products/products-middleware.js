@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { jwtSecret } = require('../../config/secrets');
-const db = require('../data/db-config');
+const db = require('../../data/db-config');
 const Items = require('./products-model');
 
 const restricted = (req, res, next) => {
